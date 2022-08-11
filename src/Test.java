@@ -2,18 +2,15 @@ abstract class Formato {
 
     String cor;
 
-    // these are abstract methods
     abstract double area();
     public abstract String toString();
 
-    // abstract class can have the constructor
     public Formato(String cor)
     {
         System.out.println("Formato construtor é chamado");
         this.cor = cor;
     }
 
-    // this is a concrete method
     public String getCor() { return cor; }
 }
 class Circulo extends Formato {
@@ -22,7 +19,6 @@ class Circulo extends Formato {
     public Circulo(String cor, double raio)
     {
 
-        // calling Shape constructor
         super(cor);
         System.out.println("Construtor circulo é chamado");
         this.raio = raio;
@@ -47,7 +43,6 @@ class Retangulo extends Formato {
     public Retangulo(String cor, double comprimento,
                      double largura)
     {
-        // calling Shape constructor
         super(cor);
         System.out.println("Construtor do retangulo é chamado");
         this.comprimento = comprimento;
